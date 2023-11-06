@@ -2,7 +2,7 @@
 Pangolang python based programming language. Pangolang files have a file extension named `.pan`
 
 # Installation ⬇️
-To install pangolang download the zip folder and run the `installer.exe`.
+To install pangolang download the zip folder and run the <a href="https://raw.githubusercontent.com/JuRxY/pangolang/main/installer/installer.exe">pangolang installer</a>.
 
 # Run Scripts 🏃‍♂️
 There are two ways to run scripts:
