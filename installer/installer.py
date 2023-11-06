@@ -2,9 +2,16 @@ import tkinter as tk
 from tkinter import filedialog
 import os
 import subprocess
+import requests
+import sys
 
 #############################################################################
 # VARIABLES                                                                 #
+github_user = "JuRxY"
+github_repo = "pangolang"
+repo_folder_path = "/pangolang_v1.2/"
+api_url = f"https://api.github.com/repos/{github_user}/{github_repo}/contents/{repo_folder_path}"
+
 installation_path = r""
 pangolang_logo = """
     ⠀⣀⠀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -60,16 +67,37 @@ def add_to_path(path):
         # Save the updated PATH environment variable
         cmd = 'setx PATH "{}"'.format(os.environ['PATH'])
         subprocess.call(cmd, shell=True)
-
-        return 0
-    else:
-        return 1
     
 def install_pangolang():
     pangobat_path = installation_path + "/pangolang_v1.2/pango.bat"
     # get pangolang files from github
-    # install them to the path installation_path
-    # add pangobat to the path
+    response = requests.get(api_url, headers={})
+
+    if response.status_code == 200: # IF GITHUB URL WORKS
+        folder_contents = response.json()
+
+        # Create a local folder to save the downloaded files
+        os.makedirs(installation_path, exist_ok=True)
+
+        # Iterate through the folder contents and download files
+        for item in folder_contents:
+            if item.get('type') == 'file':
+                file_name = os.path.basename(item['path'])
+                local_file_path = os.path.join(installation_path, file_name)
+
+                # Download the file and save it locally
+                file_url = item['download_url']
+                file_content = requests.get(file_url).content
+                with open(local_file_path, "wb") as local_file:
+                    local_file.write(file_content)
+    else: # CRASH IF IT DOESNT WORK
+        print(response)
+        print(response.status_code)
+        sys.exit()
+
+    # add pango.bat to the path
+    add_to_path(pangobat_path)
+
 #                                                                           #
 #############################################################################
 
