@@ -1,0 +1,25 @@
+{
+  "name": "pangolang-language-support",
+  "displayName": "Pangolang Language Support",
+  "description": "Language support for pangolang.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "pangolang",
+      "aliases": ["Pangolang", "pangolang"],
+      "extensions": [".pan"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "pangolang",
+      "scopeName": "source.pan",
+      "path": "./syntaxes/pangolang.tmLanguage.json"
+    }]
+  }
+}

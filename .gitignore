@@ -1,0 +1,4 @@
+# ignore Python cache files
+.gitignore/
+__pycache__/
+pangolang_v1.1/
