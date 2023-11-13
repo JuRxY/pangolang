@@ -125,7 +125,7 @@ browse_button.grid(row=1, column=2, padx=10, pady=5)
 
 # Create an "Install" button
 install_button = tk.Button(root, text="Install", command=install_pangolang)
-install_button.config(height=2, width=20)  # Adjust the button size as needed
+install_button.config(height=2, width=20)
 install_button.grid(row=2, column=0, columnspan=3, pady=20)
 
 root.mainloop()
