@@ -2,5 +2,5 @@
 .gitignore/
 __pycache__/
 pangolang_v1.1/
-img/
+images/
 test.py
