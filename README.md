@@ -33,22 +33,20 @@ There are two ways to run scripts:
 # Executing Commands 📝
 You can find some info about all the commands and the syntax in the `grammar.txt` file. Documentation is on the way.
 
-<!--
-# Rundown of all the files:
+
+# Rundown of all the files 📂
 ```bash
++---installer
+|       installer.exe           # release ready installer file
+|       installer.py            # installer.exe source code
+|
 +---pangolang_v1.2
-|       example.pan
-|       grammar.txt
-|       pango.bat
-|       pangolang.exe
+|       example.pan             # an example of what a pangolang script looks like
+|       grammar.txt             # some context on how to use pangolang
+|       pango.bat               # bat file that calls pangolang.exe
+|       pangolang.exe           # compiled version of the pangolang shell
 |
-+---tests
-|       example.pan
-|       fibonacci.pan
-|       pyramid.pan
-|       pythonify.pan
-|
-+---pangolang-language-support
++---pangolang-language-support  # visual studio code extension for pangolang
 |   |   .vscodeignore
 |   |   CHANGELOG.md
 |   |   language-configuration.json
@@ -63,10 +61,16 @@ You can find some info about all the commands and the syntax in the `grammar.txt
 |   +---syntaxes
 |           pangolang.tmLanguage.json
 |
-|   grammar.txt
-|   pangolang.py
-|   README.md
-|   shell.py
-|   strings_with_arrows.py
++---tests                       # some test pangolang files for testing 
+|       example.pan
+|       fibonacci.pan
+|       pyramid.pan
+|       pythonify.pan
+|
+|
+|   grammar.txt                 # some context on how to use pangolang
+|   pangolang.py                # source code for everything behind pangolang
+|   README.md                   # README.md file
+|   shell.py                    # the shell that gets compiled into pangolang.exe
+|   strings_with_arrows.py      # a support file to make strings work
 ```
--->
