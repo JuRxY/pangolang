@@ -35,7 +35,7 @@ You can find some info about all the commands and the syntax in the `grammar.txt
 
 
 # Rundown of all the files 📂
-```bash
+```
 +---installer
 |       installer.exe           # release ready installer file
 |       installer.py            # installer.exe source code
