@@ -1,6 +1,6 @@
 # Pangolang 🦔
     Pangolang is a python based programming language.
-Pangolang files have a file extension named `.pan`. For now it has only been tested on `windows 7 machines and higher`.
+Pangolang files have the file extension `.pan`. For now it has only been tested on `windows 7 machines and higher`.
 
 # Installation ⬇️
 1. Download the zip folder and run the <a href="https://raw.githubusercontent.com/JuRxY/pangolang/main/installer/installer.exe">pangolang installer</a>.
